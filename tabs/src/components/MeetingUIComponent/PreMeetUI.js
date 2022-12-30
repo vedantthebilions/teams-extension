@@ -44,7 +44,7 @@ function a11yProps(index) {
   };
 }
 
-export default function BasicTabs(props) {
+export default function PreMeetUI(props) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {

@@ -36,7 +36,8 @@
               "context": [
                 "meetingChatTab",
                 "meetingDetailsTab",
-                "meetingSidePanel"
+                "meetingSidePanel",
+                "meetingStage"
               ]
         }
     ],

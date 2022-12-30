@@ -23,3 +23,26 @@ h2 {
 .Error {
   color: red;
 }
+
+.d-flex{
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+}
+
+.margin-top-5{
+  margin-top: 5%; 
+}
+
+.margin-2{
+  margin: 2% 2%; 
+}
+
+
+.main_div{
+  width: 500px;
+  margin-left: -60px;
+}
+.other_div{
+  width: 100px;
+}
