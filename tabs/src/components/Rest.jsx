@@ -42,7 +42,7 @@ class Rest extends Component {
         `https://graph.microsoft.com/beta/chats/${this.state.chatId}`,
         authHeader
       ).then(async (chat) => {
-        await Axios.get(
+        Axios.get(
           `https://graph.microsoft.com/v1.0/me/onlineMeetings?$filter=JoinWebUrl%20eq%20'${chat.data.onlineMeetingInfo?.joinWebUrl}'`,
           authHeader
         ).then((res) => {
@@ -80,11 +80,13 @@ class Rest extends Component {
             return msalInstance
               .acquireTokenPopup(tokenRequest)
               .then((response) => {
+                console.log(response)
                 // get access token from response
                 // response.accessToken
                 this.getAuthToken();
               })
               .catch((err) => {
+                console.log(err,'error ')
                 // handle error
               });
           } else {
@@ -110,7 +112,6 @@ class Rest extends Component {
   };
 
   render() {
-    console.log("this.state.meetingDetails", this.state.meetingDetails);
     return (
       <Box sx={{ width: "100%" }}>
         {this.state.meetingContext?.page?.frameContext === "content" ? (

@@ -75,7 +75,7 @@ class InMeetUI extends Component {
                     </Typography>
                   </center>
                   {/* <Typography variant="body2" color="text.secondary"> */}
-                    <TimerUI parentCallback={this.handleCallback} />
+                    <TimerUI parentCallback={this.handleCallback} second="1"/>
                   {/* </Typography> */}
                 </CardContent>
               </CardActionArea>
